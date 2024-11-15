@@ -1,0 +1,56 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    transition: background-color .5s ease;
+    z-index: 1;
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 768px) {
+            padding: 0 12px 0 20px;
+        }
+    }
+
+    &__logo {
+        max-width: 200px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity .5s ease;
+
+        -webkit-filter: invert(1);
+        filter: invert(1);
+
+        @media (max-width: 768px) {
+            padding-top: 10px;
+            max-width: 100px;
+        }
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            margin: 5px;
+            transition: opacity .5s ease;
+        }
+    }
+
+    .button {
+        height: 50px;
+
+        @media (max-width: 768px) {
+            font-size: 10px;
+            margin-top: 6px;
+            padding: 8px 11px;
+            height: 30px;
+            letter-spacing: 0;
+        }
+    }
+}
